@@ -1,0 +1,1126 @@
+/* Importación de la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variables de colores principales */
+:root {
+    --primary-color: #c7a17a;
+    --background-color: #f9f5f0;
+    --dark-color: #151515;
+}
+
+/* Configuración general del documento HTML */
+html {
+    font-size: 62.5%; /* Se establece el tamaño base de la fuente a 10px */
+    font-family: 'Poppins', sans-serif; /* Se utiliza la fuente Poppins para el documento */
+}
+
+/* Reset de márgenes, rellenos y caja del modelo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+
+/* Contenedor principal con ancho máximo y centrado */
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Estilo para el encabezado h1 */
+.heading-1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+
+/* Contenedor del héroe con fondo */
+.container-hero {
+    background-color: var(--background-color);
+}
+
+/* Sección héroe con diseño flex y espacio entre elementos */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* Sección de soporte al cliente con diseño flex y espacio entre elementos */
+.customer-support {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Ícono en la sección de soporte al cliente */
+.customer-support i {
+    font-size: 3.3rem;
+}
+
+/* Contenido de soporte al cliente con diseño de columna */
+.content-customer-support {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor del logotipo con diseño flex y espacio entre elementos */
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Ícono en el contenedor del logotipo */
+.container-logo i {
+    font-size: 3rem;
+}
+
+/* Estilo del enlace dentro del logotipo */
+.container-logo h1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+/* Contenedor del usuario con diseño flex y espacio entre elementos */
+.container-user {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+/* Ícono de usuario en el contenedor del usuario */
+.container-user .fa-user {
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-right: 2.5rem;
+    border-right: 1px solid #e2e2e2;
+}
+
+/* Ícono de carrito de compras en el contenedor del usuario */
+.container-user .fa-basket-shopping {
+    font-size: 3rem;
+    color: var(--primary-color);
+    padding-left: 1rem;
+}
+
+/* Contenido del carrito de compras con diseño de columna */
+.content-shopping-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ************* NAVBAR ************* */
+
+/* Contenedor de la barra de navegación con fondo de color principal */
+.container-navbar {
+    background-color: var(--primary-color);
+}
+
+/* Barra de navegación con diseño flex y espacio entre elementos */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* Ícono de menú en la barra de navegación */
+.navbar .fa-bars {
+    display: none;
+}
+
+/* Menú de navegación con diseño flex y espacio entre elementos */
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Elemento de la lista del menú sin viñetas */
+.menu li {
+    list-style: none;
+}
+
+/* Enlace del menú con estilos */
+.menu a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Efecto de línea debajo del enlace en el menú */
+.menu a::after {
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de línea visible al pasar el ratón sobre el enlace en el menú */
+.menu a:hover::after {
+    opacity: 1;
+}
+
+/* Cambio de color al pasar el ratón sobre el enlace en el menú */
+.menu a:hover {
+    color: #fff;
+}
+
+/* Formulario de búsqueda con posición relativa */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    background-color: #fff;
+    height: 4.4rem;
+    overflow: hidden;
+}
+
+/* Entrada de búsqueda en el formulario */
+.search-form input {
+    outline: none;
+    font-family: inherit;
+    border: none;
+    width: 25rem;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #777;
+    cursor: pointer;
+}
+
+/* Estilo del botón de búsqueda en el formulario */
+.search-form .btn-search {
+    border: none;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+}
+
+/* Ícono en el botón de búsqueda */
+.btn-search i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+
+/* ********************************** */
+/*            MAIN CONTENT            */
+/* ********************************** */
+
+/* Fondo de color principal para el contenido principal */
+.main-content {
+    background-color: var(--background-color);
+}
+
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+
+/* Contenedor de características con diseño de cuadrícula y espacio entre elementos */
+.container-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+/* Tarjeta de característica con diseño de columna y espacio entre elementos */
+.card-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+}
+
+/* Ícono en la tarjeta de característica */
+.card-feature i {
+    font-size: 2.7rem;
+    color: var(--primary-color);
+}
+
+/* Contenido de la característica con diseño de columna y espacio entre elementos */
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Estilo del span en el contenido de la característica */
+.feature-content span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+/* Estilo del párrafo en el contenido de la característica */
+.feature-content p {
+    color: #777;
+    font-weight: 500;
+}
+
+/* ********************************** */
+/*             CATEGORIES             */
+/* ********************************** */
+
+/* Contenedor de las principales categorías con diseño de columna y espacio entre elementos */
+.top-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de categorías con diseño de cuadrícula y espacio entre elementos */
+.container-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Tarjeta de categoría con altura específica y diseño de columna y espacio entre elementos */
+.card-category {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 2rem;
+}
+
+/* Estilo del fondo de la categoría "Moca" con degradado y URL de la imagen */
+.category-moca {
+    background-image: linear-gradient(#00000080, #00000080),
+        url('/images/sillontapizado.JPG');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* Estilo del fondo de la categoría "Capuchino" con degradado y URL de la imagen */
+.category-capuchino {
+    background-image: linear-gradient(#00000080, #00000080),
+        url('/images/SillonPlomo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo del fondo de la categoría "Expreso" con degradado y URL de la imagen */
+.category-expreso {
+    background-image: linear-gradient(#00000080, #00000080),
+        url('/images/SillonCafe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilo del párrafo dentro de la tarjeta de categoría */
+.card-category p {
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: capitalize;
+    position: relative;
+}
+
+/* Línea debajo del párrafo dentro de la tarjeta de categoría */
+.card-category p::after {
+    content: '';
+    width: 2.5rem;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Estilo del span dentro de la tarjeta de categoría */
+.card-category span {
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Cambio de color al pasar el ratón sobre el span dentro de la tarjeta de categoría */
+.card-category span:hover {
+    color: var(--primary-color);
+}
+
+/* ********************************** */
+/*            TOP PRODUCTS            */
+/* ********************************** */
+
+/* Contenedor de los productos destacados con diseño de columna y espacio entre elementos */
+.top-products {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de opciones con diseño flex y espacio entre elementos */
+.container-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo del span en el contenedor de opciones */
+.container-options span {
+    color: #777;
+    background-color: #fff;
+    padding: 0.7rem 3rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* Cambio de color al pasar el ratón sobre el span en el contenedor de opciones */
+.container-options span:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Estilo del span activo en el contenedor de opciones */
+.container-options span.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Contenedor de productos con diseño de cuadrícula y espacio entre elementos */
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+}
+
+/* Tarjeta de producto con fondo de color, relleno y sombra */
+.card-product {
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de imagen con posición relativa */
+.container-img {
+    position: relative;
+}
+
+/* Imagen del producto con ancho del 100% */
+.container-img img {
+    width: 100%;
+}
+
+/* Estilos para la etiqueta de descuento dentro del contenedor de la imagen */
+.container-img .discount {
+    position: absolute;
+    left: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2px 1.2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Cambiar el fondo de la etiqueta de descuento al pasar el ratón */
+.card-product:hover .discount {
+    background-color: #000;
+}
+
+/* Estilos para el grupo de botones */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+/* Estilos para botones individuales en el grupo de botones */
+.button-group span {
+    border: 1px solid var(--primary-color);
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Cambiar el fondo del botón al pasar el ratón */
+.button-group span:hover {
+    background-color: var(--primary-color);
+}
+
+/* Estilos para el ícono en el grupo de botones */
+.button-group span i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Cambiar el color del ícono al pasar el ratón */
+.button-group span:hover i {
+    color: #fff;
+}
+
+/* Ajustar la posición del grupo de botones al pasar el ratón sobre la tarjeta */
+.card-product:hover .button-group {
+    z-index: 0;
+    right: -1rem;
+}
+
+/* Estilos para el diseño de cuadrícula del contenido de la tarjeta del producto */
+.content-card-product {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 1rem;
+}
+
+/* Estilos para las estrellas en el contenido de la tarjeta del producto */
+.stars {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+}
+
+/* Estilos para los íconos de las estrellas */
+.stars i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+/* Estilos para el título en el contenido de la tarjeta del producto */
+.content-card-product h3 {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* Cambiar el color del título al pasar el ratón */
+.content-card-product h3:hover {
+    color: var(--primary-color);
+}
+
+/* Estilos para el botón "Agregar al carrito" */
+.add-cart {
+    justify-self: start;
+    border: 2px solid var(--primary-color);
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cambiar el fondo del botón "Agregar al carrito" al pasar el ratón */
+.add-cart:hover {
+    background-color: var(--primary-color);
+}
+
+/* Estilos para el ícono en el botón "Agregar al carrito" */
+.add-cart i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Cambiar el color del ícono al pasar el ratón sobre el botón "Agregar al carrito" */
+.add-cart:hover i {
+    color: #fff;
+}
+
+/* Estilos para el precio del producto en el contenido de la tarjeta del producto */
+.content-card-product .price {
+    justify-self: end;
+    align-self: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/* Estilos para el precio con descuento en el contenido de la tarjeta del producto */
+.content-card-product .price span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    color: #777;
+    margin-left: 0.5rem;
+}
+
+/* Estilos para la sección de galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 30rem);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Estilos para las imágenes de la galería */
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajuste de estilo para una imagen específica de la galería */
+.gallery-img-3 {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+
+/* Estilos para la sección de ofertas especiales */
+.specials {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Estilos para la sección de blogs */
+.blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilos para el contenedor de blogs */
+.container-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Estilos para una tarjeta de blog individual */
+.card-blog {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilos para el contenedor de imagen en una tarjeta de blog */
+.card-blog .container-img {
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para el grupo de botones de una tarjeta de blog */
+.button-group-blog {
+    position: absolute;
+    bottom: 1.5rem;
+    right: -2.5rem;
+    display: flex;
+    gap: 0.7rem;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* Ajustar la posición del grupo de botones al pasar el ratón sobre la tarjeta de blog */
+.card-blog:hover .button-group-blog {
+    z-index: 0;
+    right: 1.5rem;
+}
+
+/* Estilos para un botón individual en el grupo de botones de una tarjeta de blog */
+.button-group-blog span {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el ícono en el grupo de botones de una tarjeta de blog */
+.button-group-blog span i {
+    font-size: 1.3rem;
+}
+
+/* Cambiar el fondo del botón al pasar el ratón en el grupo de botones de una tarjeta de blog */
+.button-group-blog span:hover {
+    background-color: var(--primary-color);
+}
+
+/* Cambiar el color del ícono al pasar el ratón en el grupo de botones de una tarjeta de blog */
+.button-group-blog span:hover i {
+    color: #fff;
+}
+
+/* Estilos para el título del contenido del blog */
+.content-blog h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.7rem;
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* Cambiar el color del título al pasar el ratón sobre el contenido del blog */
+.content-blog h3:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Estilos para el párrafo del contenido del blog */
+.content-blog p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #777;
+}
+
+/* Estilos para el span en el contenido del blog */
+.content-blog span {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+/* Estilos para el botón "Leer más" */
+.btn-read-more {
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    margin: 3rem 0 5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Cambiar el fondo del botón "Leer más" al pasar el ratón */
+.btn-read-more:hover {
+    background-color: var(--dark-color);
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: var(--primary-color);
+}
+
+/* Estilos para el contenedor del pie de página */
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+}
+
+/* Estilos para el menú del pie de página */
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 30rem;
+    gap: 3rem;
+    justify-items: center;
+}
+
+/* Estilos para el título del pie de página */
+.title-footer {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+/* Estilos para la información de contacto, información, mi cuenta y boletín en el pie de página */
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Estilos para las listas en el pie de página */
+.contact-info ul,
+.information ul,
+.my-account ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Estilos para los elementos de lista en el pie de página */
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* Estilos para los enlaces en los elementos de lista del pie de página */
+.information ul li a,
+.my-account ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Cambiar el color del enlace al pasar el ratón sobre los elementos de lista del pie de página */
+.information ul li a:hover,
+.my-account ul li a:hover {
+    color: var(--dark-color);
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Estilos para los íconos de redes sociales en el pie de página */
+.social-icons span {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para los íconos en los íconos de redes sociales en el pie de página */
+.social-icons span i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Estilos específicos para el ícono de Facebook en el pie de página */
+.facebook {
+    background-color: #3b5998;
+}
+
+/* Estilos específicos para el ícono de Twitter en el pie de página */
+.twitter {
+    background-color: #00acee;
+}
+
+/* Estilos específicos para el ícono de YouTube en el pie de página */
+.youtube {
+    background-color: #c4302b;
+}
+
+/* Estilos específicos para el ícono de Pinterest en el pie de página */
+.pinterest {
+    background-color: #c8232c;
+}
+
+/* Estilos específicos para el ícono de Instagram en el pie de página */
+.instagram {
+    background: linear-gradient(
+        #405de6,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d,
+        #f56040,
+        #fcaf45
+    );
+}
+
+/* Estilos para el contenido en el pie de página */
+.content p {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Estilos para la entrada de texto en el pie de página */
+.content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #d2b495;
+    cursor: pointer;
+    padding: 0.5rem 0 1.2rem;
+    color: var(--dark-color);
+    display: block;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+/* Estilos para el marcador de posición en la entrada de texto en el pie de página */
+.content input::-webkit-input-placeholder {
+    color: #eee;
+}
+
+/* Estilos para el botón en el pie de página */
+.content button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Cambiar el fondo del botón al pasar el ratón sobre él */
+.content button:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* Estilos para los derechos de autor en el pie de página */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #d2b495;
+}
+
+/* Estilos para el texto de derechos de autor en el pie de página */
+.copyright p {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+/* Estilos específicos para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%; /* Reducción del tamaño de fuente base */
+	}
+
+	.hero {
+		padding: 2rem; /* Ajuste de relleno para la sección hero */
+	}
+
+	.customer-support {
+		display: none; /* Ocultar el bloque de soporte al cliente */
+	}
+
+	.content-shopping-cart {
+		display: none; /* Ocultar el bloque de compras */
+	}
+
+	.navbar {
+		padding: 1rem 2rem; /* Ajuste de relleno para la barra de navegación */
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem; /* Ajuste del tamaño del icono de menú desplegable */
+	}
+
+	.menu {
+		display: none; /* Ocultar el menú principal */
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem; /* Ajuste de relleno y diseño de columnas para las características */
+	}
+
+	.card-feature {
+		padding: 2rem; /* Ajuste de relleno para las tarjetas de características */
+	}
+
+	.heading-1 {
+		font-size: 2.4rem; /* Ajuste del tamaño de fuente para encabezados */
+	}
+
+	.card-category {
+		height: 12rem; /* Ajuste de altura para las tarjetas de categoría */
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center; /* Centrar elementos en el contenedor de opciones */
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem; /* Ajuste de relleno para las opciones */
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem); /* Ajuste de filas para la galería de imágenes */
+	}
+
+	.container-blogs {
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+		height: 52rem; /* Ajuste de altura para el contenedor de blogs */
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr); /* Ajuste de columnas para el pie de página */
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem; /* Espaciado entre elementos en el bloque de derechos de autor */
+	}
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%; /* Reducción adicional del tamaño de fuente base */
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		padding: 22rem 0; /* Ajuste de relleno para la sección de banner en pantallas más pequeñas */
+	}
+
+	.heading-1 {
+		font-size: 2.8rem; /* Ajuste adicional del tamaño de fuente para encabezados */
+	}
+
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem; /* Ajuste para tarjetas de características en pantallas más pequeñas */
+	}
+
+	.feature-content {
+		align-items: center;
+	}
+
+	.feature-content p {
+		font-size: 1.4rem; /* Ajuste del tamaño de fuente para el contenido de características */
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem; /* Ajuste del tamaño de fuente para el contenido de características */
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem; /* Ajuste del tamaño de fuente para opciones en pantallas más pequeñas */
+		padding: 1rem 1.5rem;
+		font-weight: 500;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 1rem; /* Ajuste de espacio entre elementos en la sección de productos */
+	}
+
+	.container-img .discount {
+		font-size: 2rem; /* Ajuste del tamaño de fuente para la etiqueta de descuento */
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem; /* Ajuste del tamaño de fuente para encabezados de productos */
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 20rem); /* Ajuste de filas para la galería en pantallas más pequeñas */
+	}
+
+	.blogs {
+		padding: 2rem; /* Ajuste de relleno para la sección de blogs */
+	}
+
+	.container-blogs {
+		grid-template-columns: 1fr; /* Ajuste de columnas para el contenedor de blogs en pantallas más pequeñas */
+		height: 75rem; /* Ajuste de altura para el contenedor de blogs en pantallas más pequeñas */
+	}
+
+	.content-blog h3 {
+		font-size: 2.4rem; /* Ajuste del tamaño de fuente para encabezados de blogs */
+	}
+
+	.content-blog span {
+		font-size: 1.8rem; /* Ajuste del tamaño de fuente para contenido en blogs */
+	}
+
+	.content-blog p {
+		font-size: 2.2rem; /* Ajuste del tamaño de fuente para párrafos en blogs */
+	}
+
+	.btn-read-more {
+		font-size: 1.8rem; /* Ajuste del tamaño de fuente para el botón "Leer más" */
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul {
+		display: none; /* Ocultar listas en información de contacto, información y cuenta en pantallas más pequeñas */
+	}
+
+	.contact-info {
+		align-items: center; /* Centrar elementos en información de contacto */
+	}
+
+	.menu-footer {
+		grid-template-columns: 1fr; /* Ajuste de columnas para el pie de página en pantallas más pequeñas */
+	}
+
+	.content p {
+		font-size: 1.6rem; /* Ajuste del tamaño de fuente para párrafos en la sección de contenido */
+	}
+}
